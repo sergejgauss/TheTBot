@@ -132,8 +132,8 @@ class TelegramBot:
                             f"Вероятность реакции: {analysis_data["important"]}% {"\\u2757\\uFE0F" if analysis_data["important"] >= 80 else ""}  \n\n"
                             f"Влияние на: {', '.join({0: 'Акции', 1: 'Металлы', 2: 'Криптовалюта', 3: 'Валютный рынок'}.get(c, 'Неизвестно') for c in analysis_data['source'])} \n"
                             f"Сектора: {', '.join(c["name"]+"("+c["id"]+")" for c in analysis_data['targets'])} \n\n"
-                            f"{"\U0001F4C8 Рост" if analysis_data["UpDown"] else "\U0001F4C9 Падение"} до {analysis_data["change"]}% \n"
-                            f"\u231A Время реакции от {analysis_data["start"]} до {analysis_data["end"]} часов \n\n"
+                            f"{"\\U0001F4C8 Рост" if analysis_data["UpDown"] else "\\U0001F4C9 Падение"} до {analysis_data["change"]}% \n"
+                            f"\\u231A Время реакции от {analysis_data["start"]} до {analysis_data["end"]} часов \n\n"
                             f"Причина: {analysis_data["why"]} \n\n"
                             f"Оригинальная ссылка: {analysis_data["link"]}"
                         )
