@@ -129,13 +129,13 @@ class TelegramBot:
                     if analysis_data["important"] >= 70:
                         text = (
                             f"*{analysis_data['description']}*  \n\n"
-                            f"Вероятность реакции: {analysis_data['important']}% {'!' if analysis_data['important'] >= 80 else ''}  \n\n"
-                            f"Влияние на: {', '.join({0: 'Акции', 1: 'Металлы', 2: 'Криптовалюта', 3: 'Валютный рынок'}.get(c, 'Неизвестно') for c in analysis_data['source'])} \n"
-                            f"Сектора: {', '.join(c['name']+"("+c['id']+')' for c in analysis_data['targets'])} \n\n"
-                            f"{'+ Рост' if analysis_data['UpDown'] else '- Падение'} до {analysis_data['change']}% \n"
-                            f"-> Время реакции от {analysis_data['start']} до {analysis_data['end']} часов \n\n"
-                            f"Причина: {analysis_data['why']} \n\n"
-                            f"Оригинальная ссылка: {analysis_data['link']}"
+                            #f"Вероятность реакции: {analysis_data['important']}% {'!' if analysis_data['important'] >= 80 else ''}  \n\n"
+                            #f"Влияние на: {', '.join({0: 'Акции', 1: 'Металлы', 2: 'Криптовалюта', 3: 'Валютный рынок'}.get(c, 'Неизвестно') for c in analysis_data['source'])} \n"
+                            #f"Сектора: {', '.join(c['name']+"("+c['id']+')' for c in analysis_data['targets'])} \n\n"
+                            #f"{'+ Рост' if analysis_data['UpDown'] else '- Падение'} до {analysis_data['change']}% \n"
+                            #f"-> Время реакции от {analysis_data['start']} до {analysis_data['end']} часов \n\n"
+                            #f"Причина: {analysis_data['why']} \n\n"
+                            #f"Оригинальная ссылка: {analysis_data['link']}"
                         )
                         for cid in self.subscribers:
                          await self.bot.send_message(chat_id=cid, text=text, parse_mode="Markdown")                        
