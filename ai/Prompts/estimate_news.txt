@@ -1,0 +1,26 @@
+Read the following news at --link-- and determine whether it is important for the financial sector. Calculate its significance specifically for equities, precious metals, or cryptocurrencies. Assess whether it will lead to a price increase or decrease, by how much, and how quickly.
+
+Format your response as JSON with the following fields:
+
+important: integer percentage (0–100) representing the likelihood that the market will react
+
+description: brief summary of the news in Russian (2–3 sentences max)
+
+source: array of integers where 0=equities, 1=metals, 2=cryptocurrency, 3=classic currecny
+
+targets: array of objects { "name": string, "id": string } listing affected stocks or sectors
+
+UpDown: boolean (true = price increase, false = price decrease)
+
+why: short justification (1–2 sentences) explaining the direction
+
+change: number (expected percentage change)
+
+start: integer (hours until the movement begins)
+
+end: integer (hours until the movement peaks)
+
+link: string URL of the original news article
+
+
+Make sure the output is a complete, valid JSON object — do not truncate.
