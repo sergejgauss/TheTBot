@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  bot:
+    build: .
+    env_file: .env        # Ваш .env файл со всеми токенами
+    restart: unless-stopped
+    volumes:
+      - ./:/app           # Монтируем текущую директорию
+    command: ["python", "main.py"]
